@@ -169,6 +169,13 @@ header {
 
 .page-content {
   padding: 3.5rem;
+  background-image: url(images/golden-puppy-05.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    background-attachment: fixed;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .earn-para {
   font-weight: 300;
@@ -261,9 +268,9 @@ header {
   margin-top: 0.5rem;
 }
 .table-header {
-  font-size: 0.9rem;
-  font-weight: 300;
-  color: #565a69;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #000;
 }
 .small-size {
   font-size: 1rem;
