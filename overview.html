@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="overview.css" />
+  </head>
+  <body>
+    <main>
+      <div class="page-wrapper">
+        <!-- sidebar starts -->
+        <div class="sidebar" id="mySidebar">
+            <div class="mb-5">
+                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            </div>
+          <div>
+            <p class="mb-0">
+              <span class="plasma">plasma</span
+              ><span class="finance">finance</span>
+            </p>
+            <small class="small-title"
+              >Dashboard for Decentralized Finance</small
+            >
+          </div>
+
+          <button class="btn btn-active-wallet">
+            <div class="wallet-logo">
+              <div
+                class="wallet-circle-icon"
+                style="width: 24px; min-width: 24px; height: 24px"
+              >
+                <div
+                  style="
+                    border-radius: 50px;
+                    overflow: hidden;
+                    padding: 0px;
+                    margin: 0px;
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                  "
+                >
+                  <svg
+                    height="100"
+                    version="1.1"
+                    width="100"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    style="overflow: hidden; position: relative"
+                  >
+                    <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">
+                      Created with Raphaël 2.3.0
+                    </desc>
+                    <defs
+                      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)"
+                    ></defs>
+                    <rect
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                      rx="0"
+                      ry="0"
+                      fill="#2392e1"
+                      stroke="none"
+                      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)"
+                    ></rect>
+                    <rect
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                      rx="0"
+                      ry="0"
+                      fill="#018e72"
+                      stroke="none"
+                      transform="matrix(0.9948,0.1015,-0.1015,0.9948,1.3295,-1.5143)"
+                      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)"
+                    ></rect>
+                    <rect
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                      rx="0"
+                      ry="0"
+                      fill="#c81477"
+                      stroke="none"
+                      transform="matrix(0.0771,0.997,-0.997,0.0771,30.9999,-10.9855)"
+                      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)"
+                    ></rect>
+                    <rect
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                      rx="0"
+                      ry="0"
+                      fill="#18cdf2"
+                      stroke="none"
+                      transform="matrix(0.9826,0.1858,-0.1858,0.9826,21.1603,-4.8744)"
+                      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)"
+                    ></rect>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="wallet-info">
+              <div class="wallet-address">0xc781...68AB</div>
+              <div class="wallet-balance">
+                <span>0</span><span>&nbsp;</span><span>ETH</span>
+              </div>
+            </div>
+            <span class="drop-down">
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <div>
+            <ul class="list-group">
+                 <li class="side-list" id="overview">
+               <a href="overview.html"><i class="fa fa-pie-chart mr-3" aria-hidden="true"></i>Overview</a>
+              </li>
+              <li class="side-list" id="savings">
+                  <a href="index.html"><i class="fa fa-download mr-3" aria-hidden="true"></i
+                  >Savings</a>
+              </li>
+              <li class="side-list">
+                <a href="#"
+                  ><i class="fa fa-download mr-3" aria-hidden="true"></i
+                  >Portfolio</a
+                >
+              </li>
+              <li class="side-list">
+                <a href="#"
+                  ><i class="fa fa-download mr-3" aria-hidden="true"></i
+                  >Markets</a
+                >
+              </li>
+              <li class="side-list">
+                <a href="#"
+                  ><i class="fa fa-download mr-3" aria-hidden="true"></i>Swap</a
+                >
+              </li>
+              <li class="side-list">
+                <a href="#"
+                  ><i class="fa fa-download mr-3" aria-hidden="true"></i
+                  >Liquidity</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="socials">
+            <a href="#" style="color: #fff"
+              ><i class="fa fa-telegram" aria-hidden="true"></i
+            ></a>
+            <a href="#" style="color: #fff" class="ml-4"
+              ><i class="fa fa-medium" aria-hidden="true"></i
+            ></a>
+            <a href="#" style="color: #fff" class="ml-4"
+              ><i class="fa fa-twitter" aria-hidden="true"></i
+            ></a>
+            <a href="#" style="color: #fff" class="ml-4"
+              ><i class="fa fa-facebook-official" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+        <!-- sidebar ends -->
+
+        <!-- content starts -->
+        <div class="content" id="main">
+          <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <button class="openbtn" onclick="openNav()">☰</button>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                      <span class="number-span">0 PPAY</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><span class="icons-span">
+                        <i class="fa fa-money" aria-hidden="true"></i> </span
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><span class="icons-span">
+                        <i class="fa fa-qrcode" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><span class="icons-span">
+                        <i class="fa fa-exchange" aria-hidden="true"></i> </span
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span class="icons-span">
+                        56
+                        <i class="fa fa-building" aria-hidden="true"></i> </span
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><span class="icons-span">
+                        <i class="fa fa-cog" aria-hidden="true"></i> </span
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+
+          <div class="page-content">
+            <div id="title">
+              <div class="modal-popup">
+                <p>My Wallets</p>
+
+                <div style="display: grid; grid-template-columns: 3fr 1fr">
+                  <div style="display: flex">
+                    <div class="wallet-logo">
+                      <div
+                        class="wallet-circle-icon"
+                        style="width: 24px; min-width: 24px; height: 24px"
+                      >
+                        <div
+                          style="
+                            border-radius: 50px;
+                            overflow: hidden;
+                            padding: 0px;
+                            margin: 0px;
+                            width: 24px;
+                            height: 24px;
+                            display: inline-block;
+                          "
+                        >
+                          <svg
+                            height="100"
+                            version="1.1"
+                            width="100"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            style="overflow: hidden; position: relative"
+                          >
+                            <desc
+                              style="
+                                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                              "
+                            >
+                              Created with Raphaël 2.3.0
+                            </desc>
+                            <defs
+                              style="
+                                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                              "
+                            ></defs>
+                            <rect
+                              x="0"
+                              y="0"
+                              width="24"
+                              height="24"
+                              rx="0"
+                              ry="0"
+                              fill="#2392e1"
+                              stroke="none"
+                              style="
+                                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                              "
+                            ></rect>
+                            <rect
+                              x="0"
+                              y="0"
+                              width="24"
+                              height="24"
+                              rx="0"
+                              ry="0"
+                              fill="#018e72"
+                              stroke="none"
+                              transform="matrix(0.9948,0.1015,-0.1015,0.9948,1.3295,-1.5143)"
+                              style="
+                                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                              "
+                            ></rect>
+                            <rect
+                              x="0"
+                              y="0"
+                              width="24"
+                              height="24"
+                              rx="0"
+                              ry="0"
+                              fill="#c81477"
+                              stroke="none"
+                              transform="matrix(0.0771,0.997,-0.997,0.0771,30.9999,-10.9855)"
+                              style="
+                                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                              "
+                            ></rect>
+                            <rect
+                              x="0"
+                              y="0"
+                              width="24"
+                              height="24"
+                              rx="0"
+                              ry="0"
+                              fill="#18cdf2"
+                              stroke="none"
+                              transform="matrix(0.9826,0.1858,-0.1858,0.9826,21.1603,-4.8744)"
+                              style="
+                                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                              "
+                            ></rect>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wallet-info">
+                      <div class="wallet-address">0xc781...68AB</div>
+                      <div class="wallet-balance">
+                        <span>0</span><span>&nbsp;</span><span>ETH</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="display: flex">
+                    <div class="wallet-info">
+                      <div class="wallet-address">0xc781...68AB</div>
+                      <div class="wallet-balance">
+                        <span>0</span><span>&nbsp;</span><span>ETH</span>
+                      </div>
+                    </div>
+                    <div class="ml-3">
+                      <div
+                        style="
+                          background: #1fc781;
+                          opacity: 1;
+                          border-radius: 50%;
+                          font-size: 0.7rem;
+                          width: 1rem;
+                          height: 1rem;
+                          text-align: center;
+                        "
+                      >
+                        <i
+                          style="color: #fff"
+                          class="fa fa-check"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-4 d-flex">
+                  <div class="plus-sign text-center">
+                    <span>+</span>
+                  </div>
+                  <div class="ml-3 connect">connect another</div>
+                </div>
+                <div class="mt-2 d-flex">
+                  <div class="plus-sign text-center"><span>+</span></div>
+                  <div class="ml-3 connect">connect another</div>
+                </div>
+              </div>
+
+              <h3><b>Portfolio</b></h3>
+            </div>
+
+            <div id="card-list" class="grid-content">
+              <div class="first-card-part">
+                <p>Total Balance</p>
+                <h4>$0.00</h4>
+                <div class="d-flex">
+                  <div class="eth-img">
+                    <img src="images/eth-black.24d4fc53.svg" alt="" />
+                  </div>
+                  <div class="ml-2">0</div>
+                </div>
+                <p class="mt-3"><span class="assets">0 Assets</span></p>
+              </div>
+              <div class="second-card-part">
+                <p>Total Balance</p>
+                <h4>$0.00</h4>
+                <div class="d-flex">
+                  <div class="eth-img">
+                    <img src="images/eth-black.24d4fc53.svg" alt="" />
+                  </div>
+                  <div class="ml-2">0</div>
+                </div>
+                <p class="mt-3"><span class="assets">0 Assets</span></p>
+              </div>
+              <div class="third-card-part">
+                <p>Total Balance</p>
+                <h4>$0.00</h4>
+                <div class="d-flex">
+                  <div class="eth-img">
+                    <img src="images/eth-black.24d4fc53.svg" alt="" />
+                  </div>
+                  <div class="ml-2">0</div>
+                </div>
+                <p class="mt-3"><span class="assets">0 Assets</span></p>
+              </div>
+            </div>
+
+            <div class="mt-4" style="text-align: center">
+              <button id="btn-toggle" class="btn toggle-hide-btn">
+                <span id="hide">
+                  <span
+                    ><i class="fa fa-eye-slash" aria-hidden="true"></i
+                  ></span>
+                  <span>Hide Stake Details</span>
+                </span>
+                <span id="show" style="display: none">
+                  <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+                  <span>Show Stake Details</span>
+                </span>
+              </button>
+            </div>
+
+            <div>
+              <div class="overview-card" >
+                  <div class="canvas-div">
+                   <canvas id="myChart"  width={50} height={50}></canvas>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content ends -->
+      </div>
+    </main>
+
+    <script src="overview.js"></script>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["pool1", "pool2", "pool3"],
+          datasets: [
+            {
+              label: "Ovierview Of Pools",
+              data: [12, 19, 3],
+              backgroundColor: [
+                "rgb(35, 35, 45)",
+                "rgb(235, 76, 194)",
+                "rgb(61, 142, 115)"
+              ],
+              borderColor: [
+                 "rgba(35, 35, 45, 0.2)",
+                "rgba(235, 76, 194, 0.2)",
+                "rgba(61, 142, 115, 0.2)"
+              ],
+        
+              borderWidth: 1,
+            radius: "90%"
+            },
+          ],
+
+        },
+    //     options: {
+    //   cutout: 30,
+    //   elements:{
+    //       arc:{
+    //           weight: "10px",
+    //           offset: "15px"
+    //       }
+    //   },
+    //       scales: {
+    //         y: {
+    //           beginAtZero: true,
+    //         },
+    //       },
+    //     },
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

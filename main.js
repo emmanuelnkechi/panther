@@ -1,36 +1,41 @@
-let btn = document.getElementById("btn-toggle");
-let card = document.getElementById("card-list");
-let hide = document.getElementById("hide");
-let show = document.getElementById("show")
-let title = document.getElementById("title");
-let one = document.getElementById("one");
-let two = document.getElementById("two");
-let three = document.getElementById("three");
-let four = document.getElementById("four");
-let five = document.getElementById("five");
-let acrossOne = document.querySelector(".across-one")
-let acrossTwo = document.querySelector(".across-two");
-let acrossThree = document.querySelector(".across-three");
-let acrossFour = document.querySelector(".across-four");
-let acrossFive = document.querySelector(".across-five");
-let infini = document.querySelector(".infini");
-let last = document.querySelector(".last");
-let makeDepo = document.querySelector(".make-depo-one");
-let infiniTwo = document.querySelector(".infini-two");
-let lastTwo = document.querySelector(".last-two");
-let makeDepoTwo = document.querySelector(".make-depo-two");
-let infiniThree = document.querySelector(".infini-three");
-let lastThree = document.querySelector(".last-three");
-let makeDepoThree = document.querySelector(".make-depo-three");
-let infiniFour = document.querySelector(".infini-four");
-let lastFour = document.querySelector(".last-four");
-let makeDepoFour = document.querySelector(".make-depo-four");
-let infiniFive = document.querySelector(".infini-five");
-let lastFive = document.querySelector(".last-five");
-let makeDepoFive = document.querySelector(".make-depo-five");
-let toggleBtn = document.querySelector(".btn-active-wallet");
-let modalPop = document.querySelector(".modal-popup");
+const btn = document.getElementById("btn-toggle");
+const card = document.getElementById("card-list");
+const hide = document.getElementById("hide");
+const show = document.getElementById("show")
+const title = document.getElementById("title");
+const one = document.getElementById("one");
+const two = document.getElementById("two");
+const three = document.getElementById("three");
+const acrossOne = document.querySelector(".across-one")
+const acrossTwo = document.querySelector(".across-two");
+const acrossThree = document.querySelector(".across-three");
+const infini = document.querySelector(".infini");
+const last = document.querySelector(".last");
+const makeDepo = document.querySelector(".make-depo-one");
+const infiniTwo = document.querySelector(".infini-two");
+const lastTwo = document.querySelector(".last-two");
+const makeDepoTwo = document.querySelector(".make-depo-two");
+const infiniThree = document.querySelector(".infini-three");
+const lastThree = document.querySelector(".last-three");
+const makeDepoThree = document.querySelector(".make-depo-three");
+const toggleBtn = document.querySelector(".btn-active-wallet");
+const modalPop = document.querySelector(".modal-popup");
+
+
 let count = 0;
+
+function openNav() {
+    document.getElementById("mySidebar").style.width = "15rem";
+    document.getElementById("mySidebar").style.padding = "2rem";
+  document.getElementById("main").style.marginLeft = "0rem";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("mySidebar").style.padding = "0";
+  document.getElementById("main").style.marginLeft = "0px";
+}
+
 
 btn.addEventListener("click", toggle)
 
@@ -46,7 +51,7 @@ function toggle() {
         hide.style.display = "none";
        show.style.display = "block";
        title.style.textAlign = "center"
-   } 
+    }
 }
 
 one.addEventListener("mouseover", function (event) {
@@ -111,57 +116,11 @@ one.addEventListener("mouseover", function (event) {
     },
     false
   );
-
-  four.addEventListener(
-    "mouseover",
-    function (event) {
-      acrossFour.style.gridColumn = "10/12";
-      makeDepoFour.style.display = "inline";
-      infiniFour.style.display = "none";
-      lastFour.style.display = "none";
-    },
-    false
-  );
-
-  four.addEventListener(
-    "mouseout",
-    function (event) {
-      acrossFour.style.gridColumn = "10/11";
-      makeDepoFour.style.display = "none";
-      infiniFour.style.display = "inline";
-      lastFour.style.display = "inline";
-    },
-    false
-  );
-
-
-  five.addEventListener(
-    "mouseover",
-    function (event) {
-      acrossFive.style.gridColumn = "10/12";
-      makeDepoFive.style.display = "inline";
-      infiniFive.style.display = "none";
-      lastFive.style.display = "none";
-    },
-    false
-  );
-
-  five.addEventListener(
-    "mouseout",
-    function (event) {
-      acrossFive.style.gridColumn = "10/11";
-      makeDepoFive.style.display = "none";
-      infiniFive.style.display = "inline";
-      lastFive.style.display = "inline";
-    },
-    false
-  );
-
     
 
 toggleBtn.addEventListener("click", toggleModal)
 let toggleCount = 0;
-function toggleModal() {
+function toggleModal(e) {
     toggleCount++;
     if (toggleCount % 2 === 0) {
         modalPop.style.display = "none";
@@ -169,4 +128,10 @@ function toggleModal() {
     if (toggleCount % 2 !== 0) {
       modalPop.style.display = "block";
     }
+    // var isClickInside = toggleBtn.contains(e.target);
+    // console.log(isClickInside);
+    // if (!isClickInside) {
+    //     modalPop.style.display = "none";
+    // }
+
 }
