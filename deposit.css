@@ -11,7 +11,6 @@ html, body {
   z-index: 1;
   top: 0;
   left: 0;
-  overflow-x: hidden;
   transition: margin-right 0.5s;
   background: #23232d;
   color: #bec6cb;
@@ -108,17 +107,17 @@ font-size: 1.5rem;
     margin-right: 0;
     cursor: pointer;
 }
-.modal-popup{
-    position: absolute;
-    left: 15rem;
-    background: #33333d;
-    color: #fff;
-    padding: 0.8rem 1.8rem;
-    border-radius: 5px;
-    z-index: 2;
-    top: 5rem;
-    width: 20rem;
-    display: none;
+.modal-popup {
+  position: absolute;
+  left: 15rem;
+  background: #33333d;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 5px;
+  z-index: 2;
+  top: 5rem;
+  width: 20rem;
+  display: none;
 }
 .plus-sign{
   background-color: #3f3f4f;
@@ -302,16 +301,15 @@ header {
 
 .sidebar {
   height: 100%;
-  width: 0rem;
+  width: 100%;
   position: fixed;
-  z-index: 51;
+  z-index: 5;
   top: 0;
   left: 0;
-  overflow-x: hidden;
  transition: all 0.5s ease 0s;
   background: #23232d;
   color: #bec6cb;
-  padding: 0rem;
+  padding: 2rem;
 }
 /* .sidebar{
     transition: all 0.5s ease 0s;
@@ -347,13 +345,13 @@ header {
 }
 .modal-popup {
   position: absolute;
-  left: 0rem;
+  left: 1rem;
   background: #33333d;
   color: #fff;
   padding: 0.8rem 1.8rem;
   border-radius: 5px;
   z-index: 2;
-  top: 10rem;
+  top: 15rem;
   width: 20rem;
   display: none;
 }
