@@ -414,6 +414,18 @@ header {
   padding: 0.5rem 1.3rem;
   border-radius: 5px;
 }
+.overview-card {
+    background: #fff !important;
+    border-radius: 15px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.canvas-div {
+    width: 300px;
+}
+
 
 @media only screen and (min-width: 320px) and (max-width: 1033px) {
   .grid-content {
@@ -457,7 +469,7 @@ header {
 }
 .sidebar {
   height: 100%;
-  width: 100%;
+  width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -465,7 +477,8 @@ header {
  transition: all 0.5s ease 0s;
   background: #23232d;
   color: #bec6cb;
-  padding: 2rem;
+  padding: 0rem;
+  overflow: hidden;
 }
 /* .sidebar{
     transition: all 0.5s ease 0s;
@@ -571,6 +584,22 @@ header {
 }
 .across-three {
     grid-column: 3 / -1;
+}
+.overview-card {
+    background: #fff !important;
+    border-radius: 15px;
+    width: 40% !important;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.canvas-div {
+    width: 250px !important;
+}
+
+.canvas-div{
+    width:500px;
+   
 }
 /* .table-head {
   display: grid;

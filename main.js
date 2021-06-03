@@ -26,8 +26,8 @@ const modalPop = document.querySelector(".modal-popup");
 let count = 0;
 
 function openNav() {
-    document.getElementById("mySidebar").style.width = "100%";
-    document.getElementById("mySidebar").style.padding = "2rem";
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.padding = "2rem";
   document.getElementById("main").style.marginLeft = "0rem";
 }
 

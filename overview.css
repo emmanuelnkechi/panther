@@ -324,7 +324,7 @@ padding: 2rem;
 
 .sidebar {
   height: 100%;
-  width: 100%;
+  width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -332,7 +332,8 @@ padding: 2rem;
  transition: all 0.5s ease 0s;
   background: #23232d;
   color: #bec6cb;
-  padding: 2rem;
+  padding: 0rem;
+  overflow: hidden;
 }
 /* .sidebar{
     transition: all 0.5s ease 0s;
