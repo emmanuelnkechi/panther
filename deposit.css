@@ -236,6 +236,9 @@ header {
     position: relative;
     z-index: 4;
 }
+.path-img-div{
+    text-align: center;
+}
 .first-part{
     border: 1px solid #dbdde1;
     border-radius: 8px;
