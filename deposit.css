@@ -250,6 +250,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: #565a69;
+    grid-gap: 0.3rem;
 }
 .max{
     height: 32px;
@@ -263,6 +264,12 @@ header {
 }
 .bal{
     text-align: right;
+}
+.input-num{
+    height: 100%;
+    border: 0.5px solid #565a69;
+    color: #565a69;
+    border-radius: 5px;
 }
 .pay-p{
     font-weight: 500;
@@ -329,6 +336,13 @@ header {
   padding: 10px 15px;
   border: none;
 }
+.input-num{
+    height: inherit;
+    border: 0.5px solid #565a69;
+    color: #565a69;
+    border-radius: 5px;
+
+}
 
 .openbtn:hover {
   background-color: #444;
@@ -387,11 +401,7 @@ header {
     vertical-align: middle;
     margin-left: 1.3rem;
 }
-#navbarNav{
-    display: none;
-}
-.navbar-toggler{
-    display: none;
-}
+
+
 }
 

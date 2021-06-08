@@ -379,12 +379,7 @@ padding: 2rem;
   width: 20rem;
   display: none;
 }
-#navbarNav{
-    display: none;
-}
-.navbar-toggler{
-    display: none;
-}
+
 .overview-card {
     background: #fff !important;
     padding: 2rem 2rem;

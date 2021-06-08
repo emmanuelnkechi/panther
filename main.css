@@ -524,12 +524,8 @@ header {
   width: 20rem;
   display: none;
 }
-#navbarNav{
-    display: none;
-}
-.navbar-toggler{
-    display: none;
-}
+
+
 .additional-info{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
